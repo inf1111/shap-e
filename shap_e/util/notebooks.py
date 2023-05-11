@@ -1,6 +1,8 @@
 import base64
 import io
 from typing import Union
+import random
+import os
 
 import ipywidgets as widgets
 import numpy as np
@@ -83,4 +85,19 @@ def gif_widget(images):
     )
     writer.seek(0)
     data = base64.b64encode(writer.read()).decode("ascii")
-    return widgets.HTML(f'<img src="data:image/gif;base64,{data}" />')
+
+    #return widgets.HTML(f'<img src="data:image/gif;base64,{data}" />')
+    #return data;
+
+    #rd = random.randint(1, 100000);
+    #file=open(f"/home/ubuntu/shap-e/_temp/{rd}.txt", "w+")
+    #file.write(f'<img src="data:image/gif;base64,{data}" />')
+    #file.close()
+
+    rd = random.randint(1, 100000);
+
+    if not os.path.exists('/home/ubuntu/shap-e/_temp'):
+        os.makedirs('/home/ubuntu/shap-e/_temp')
+
+    with open(f"/home/ubuntu/shap-e/_temp/{rd}.png", "wb") as fh:
+        fh.write(base64.decodebytes(bytes(data, encoding='utf-8')))

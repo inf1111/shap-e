@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a9e713d9-8882-4efa-a2fd-6db872f06803" name="immerse">
+        <fileTransfer rootFolder="/home/ubuntu/shap-e" accessType="SFTP" host="91.135.159.134" port="22" sshConfigId="3a94645d-a096-44ec-a57e-bbfff0d8fd06" sshConfig="ubuntu@91.135.159.134:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
